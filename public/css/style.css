@@ -1,0 +1,316 @@
+*{ 
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;}
+
+header {
+    padding-left: 0%;
+    padding-right: 0%;
+    background: #EAC926;}
+
+body {font-family: 'Roboto', Arial, sans-serif;
+        font-size: 16px;    
+}
+
+.contenedor p{margin: 0px 45%;}
+
+#contenedorbusqueda {  
+    display: block;
+    background: white;
+    width: 35%;
+    height: 25px;
+    border: 2px solid black;
+   }
+.anchototal{width: 90%;}
+header ul{ /*a toda la listas del header lo pone al margen izquierdo y le saca el punto*/
+    padding: 0px;
+    list-style-type: none;
+}
+
+header ul a{ 
+    text-align: left;
+    color: black;
+    text-decoration: none;
+}
+section.banner img{
+    width: 100%;
+    
+}
+
+.colorblanco{background-color: white;
+           
+}
+.centrado {text-align: center;}
+.posicion {background-position: center center;}
+.negrita{font-weight: bold;}
+div.burger-menu{margin: 0px 45%;}
+
+.precio{
+    width: 20%;
+    font-size: 14px;
+    }
+
+.menu{
+    display: none;
+}
+
+.descuento{
+   
+    font-size: 14x;
+    color:lightgreen
+    }
+.margen img{margin: 10px;}
+
+.separacionimagenes{padding-right: 20px;padding-left: 4px;}
+
+.titulares{
+    font-size: 26px;
+    text-align: center;
+    background: #ebebeb;
+    padding: 15px;
+    color:#666;
+}
+
+.descripcion{
+    font-size: 16px;
+    padding-top: 20px;
+    color: white;
+}
+
+.burger-menu i{
+    color: white;
+    background: #1259c3;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+main {
+    padding-left: 5%;
+    padding-right: 5%;
+    background: #ebebeb;
+}
+
+
+footer ul{ 
+    text-align: center;
+    margin: 0px 0px;
+    list-style-type: none;
+    color: #666;
+}
+
+.imagen-footer i{
+    color: #1259c3;
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    font-size: 2em;
+    margin-bottom: 10px;
+    margin-top: 10px;  
+}
+
+
+
+.contenedorarticulo {
+    display: flex;
+    flex-wrap: wrap;  
+    position: relative;
+    background: white;
+    border: 1px solid #ebebeb;
+    padding: 15px;
+    justify-content: space-between;
+}
+
+.icono {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: block;
+    border: 1px solid #39b54a;;
+    font-size: 16px;
+    color:lightgreen;
+    padding: 5px;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+article:hover .icono{
+    transition-duration: 1s;
+    transform: rotate(-90deg);
+
+}
+
+article:hover .descripcion{
+    transition-duration: 1s;
+    color: black;
+}
+
+footer { 
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    background: #ebebeb;
+    
+}
+
+.separacion {padding-top: 40px; padding-bottom: 15px;}
+ 
+ .contenedorflex {
+     width: 100%;
+     background-color: #EAC926;
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+     justify-content: space-evenly;
+     padding: 1%;
+    
+     
+ }
+ .logomercado {width: 30%;}
+ 
+
+ .contenedorflex1 {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    
+}
+main .productos {
+    display: flex;
+    flex-wrap: wrap;  
+    justify-content: space-around; 
+}
+
+main .productos article{
+    width: 90%;
+    margin-top: 20px;
+}
+
+.separadorH{
+    padding-right: 10px;
+}
+
+.productos article:hover{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+.anchoform{width: 90%;}
+
+.form{
+   margin-top: 10%;
+   margin-bottom: 10%;
+    margin-right: 20%;
+    margin-left: 20%;
+    width: 60%;
+    background-color: #ebebeb;
+    border: solid 5px #666;
+    border-radius: 2rem;
+  
+}
+
+.button{
+
+    border: solid 3px #666;
+    background-color: #ebebeb;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 3px;
+}
+
+.fondo :hover{background-color: #a9adbb;}
+
+.logo{
+    
+    width: 10rem;
+   
+    mix-blend-mode: multiply;
+
+}
+footer p{font-size: 0.7rem;}
+
+.contenedorflexfooter{
+    display: flex;
+    flex-direction: column;
+    font-size: 40%;
+    justify-content: space-around;
+    align-items: center;
+    }
+
+.ancho{padding: 1%;
+    width: 70%;
+    font-size: 16px;
+text-align: center;}
+
+
+
+@media(min-width:500px){
+    .burger-menu {display: none;}
+    .menu{
+        display: block;
+    }
+    main .productos article{
+        width: 40%;
+    }
+   
+}
+
+
+
+@media(max-width:499px){
+    .logomercado{width: 100%;}
+
+   .contenedorflex{flex-direction: column;} 
+
+   #contenedorbusqueda {  
+    display: block;
+    background: white;
+    width: 50%;
+    height: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 2px solid black;
+   }
+
+   h5{ padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;}
+
+    .precio{
+        
+        font-size: 1.5rem;
+        }
+          
+    .descuento{
+       
+        font-size:1.5rem;
+        color:lightgreen
+        }
+    
+
+        
+}
+            
+
+
+
+
+@media(min-width:769px){
+  
+    
+    main .productos article{
+        width: 22%;
+    }
+
+    .contenedorflexfooter{
+       
+        flex-direction:row;
+       
+       
+        }
+    
+}
+
+
+
