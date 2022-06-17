@@ -13,4 +13,4 @@ app.get('/register', (req,res)=>{res.sendFile(path.join(__dirname , './views/reg
 
 app.get('/login', (req,res)=>{res.sendFile(path.join(__dirname , './views/login.html'))}) 
 
-app.listen(process.env.port || 3030, ()=>{console.log('servidor corriendo correctamente')});
+app.listen(process.env.PORT || 3030, ()=>{console.log('servidor corriendo correctamente')});
