@@ -2,16 +2,22 @@
   "name": "mercado-liebre",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cdoniguian/Mercado-Liebre.git"
   },
   "author": "",
   "license": "ISC",
-  
+  "bugs": {
+    "url": "https://github.com/Cdoniguian/Mercado-Liebre/issues"
+  },
+  "homepage": "https://github.com/Cdoniguian/Mercado-Liebre#readme",
   "dependencies": {
-    "express": "^4.18.1",
-    
+    "express": "^4.18.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.16"
