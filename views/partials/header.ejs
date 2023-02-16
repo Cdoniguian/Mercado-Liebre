@@ -1,0 +1,143 @@
+<header>
+    <div class="contenedorflex">
+        <div class="logomercado">
+            <a href="/"><img src='/images/logo-mercado-liebre.svg' style="width: 60%" alt='logo'></a>
+
+        </div>
+        <div class="contenedorbusqueda">
+            <form action="#" method="get" id="contenedorbusqueda" class="busqueda">
+                <input class="anchototal" type="text" placeholder="Buscar producto, marca"
+                button type="submit" name="busqueda"> <i class="fas fa-search"></i></button>
+             
+            </form>
+        </div>
+
+        <div>
+            <h5 class="credit"><i class="fas fa-hand-holding-usd"></i>
+                Comprá en cuotas y sin tarjeta de crédito</h5>
+                
+        </div>
+    </div>
+    <div class="alineado">
+        <div class="dropdown">
+            <div >
+                <button class="buttonDeslizable">  
+                    <div class="burger-menu" > 
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </button>
+            </div>
+            <div class="dropdown-content">
+                <a href="/products/productsList">Listado de Productos</a>
+                <a  href="/products/offer">Ofertas</a>
+                <a href="/products/featured">Destacados</a>
+                <p>---------------------------------------</p>
+                <%if (typeof user !='undefined' && user.email=="admin@admin.com" ) { %>
+                    <a class='hipervinc1' href="/products/create">Crear un productos</a>
+                    <a class='hipervinc1' href="/products/disabled">Productos Desactivados</a>
+                    <p>---------------------------------------</p>
+                    <a href="/users/logout">Salir</a>
+                <% }else{ %>
+                <a href="/users/register">Creá tu cuenta</a>
+                <a href="/users/login">Ingresá</a>
+               
+                <% } %> 
+            </div>
+        </div>
+    </div>
+   
+    <nav class="menu">
+        <div class="contenedorflex1">
+            <ul class="contenedorflex1">
+
+                <li class="separadorH">
+                    <a href="/products/productsList">Listado de Productos</a>
+                </li>
+                <li class="separadorH">
+                    <a href="/products/offer">Ofertas</a>
+                </li>
+                <li class="separadorH">
+                    <a href="/products/featured">Destacados</a>
+                </li>
+                <li class="separadorH">
+                    <a href="#">Vender</a>
+                </li>
+                <li class="separadorH">
+                    <a href="#">Ayuda</a>
+                </li>
+            </ul>
+            <ul class="contenedorflex1">
+
+                <%if (locals.usuarioLogueado) { %>
+                    <div class="contenedorflex3">
+
+                        <li class="contenedorflex3">
+                            Hola:"<%= locals.usuarioLogueado.firstName %>"
+
+                                <img class="imageUser" src="/images/<%= locals.usuarioLogueado.image %>">
+                                <a href="/users/logout">Salir</a>
+                                <div class="separacionimagenes"><i class="fas fa-sign-in-alt"></i></div>
+                        </li>
+                        <li class="contenedorflex1">
+                            <a href="#">Mis compras</a>
+                            <div class="separacionimagenes"> <i class="fas fa-shopping-basket"></i></div>
+                        </li>
+                    </div>
+
+
+                    <% }else { %>
+                        <li class="contenedorflex1">
+                            <a href="#">Mis compras</a>
+                            <div class="separacionimagenes"> <i class="fas fa-shopping-basket"></i></div>
+                        </li>
+                        <li class="contenedorflex1">
+                            <a href="/users/register">Creá tu cuenta</a>
+                            <div class="separacionimagenes"><i class="fas fa-address-card" ,></i></div>
+                        </li>
+                        <li class="contenedorflex1">
+                            <a href="/users/login">Ingresá</a>
+                            <div class="separacionimagenes"><i class="fas fa-sign-in-alt"></i></div>
+                        </li>
+
+                        <% } %>
+
+
+
+            </ul>
+        </div>
+        <div>
+
+        </div>
+    </nav>
+    <div class="adminToolsResponsive">
+        <%if (typeof user !='undefined' && user.email=="admin@admin.com" ) { %>
+            <div class="flex">
+                <div class="adminTools">
+                    <div class="separarH">
+                        <a class='hipervinc1' href="/products/productsList">Listado de productos</a>
+                    </div>
+                    <div class="separarH">
+                        <a class='hipervinc1' href="/products/create">Crear un productos</a>
+                    </div>
+                    <div class="separarH">
+                        <a class='hipervinc1' href="/products/disabled">Productos Desactivados</a>
+                    </div>
+    
+                </div class="separarH">
+                <div class="adminTools">
+                    <div class="separarH">
+                        <a class='hipervinc1' href="/users/userList">Listado de Usuarios</a>
+                    </div>
+                    <div class="separarH">
+                        <a class='hipervinc1' href="/users/userList">Editar Usuario</a>
+                    </div>
+                    <div class="separarH">
+                        <a class='hipervinc1' href="/products/productsList">Eliminar Usuario</a>
+                    </div>
+                </div>
+            </div>
+            <% } %>
+    </div>
+    
+            
+</header>

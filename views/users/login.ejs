@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head', {title: 'Inicio'}) %>
+
+    <body style="background-color: #ebebeb" >
+       
+        <%- include('../partials/header') %>
+
+        <main class="centerform">
+          <div class="formLogin">
+            
+            <form action="/users/login" method="post">
+                
+              <br>
+              <div class="centradoLogin"><label for="email">Ingresar el Email: </label>
+               <br>
+               <div  class="noFlexLogin" >
+                <input style="width: 90%; border: white;"
+                type="email"
+                 name="email"
+                 id="email"
+                 size="30"
+                
+                 <% if(locals.errors && errors.email){ %>  	
+                  class="redpH" placeholder="<%= errors.email.msg %>"
+                 <% }else{ %>
+                   placeholder="Juan33@gmail.com"
+                   value="<%= locals.oldData ? oldData.email : null%>"
+                 <%} %>   							   
+                 >
+                </div>
+             </div>
+               <br> 
+               <div class="centradoLogin"><label for="address">Contraseña: </label>
+                 <br>
+                 <div  class="noFlexLogin" >
+                  <input style="width: 90%; border: white;"
+                  type="password"
+                   name="password"
+                   id="password"
+                   size="30"
+                   minlength="3"
+                   maxlength="20"
+                   <% if(locals.errors && errors.password){ %>  	
+                    class="redpH" placeholder="<%= errors.password.msg %>"
+                   <% }else{ %>
+                     value="<%= locals.oldData ? oldData.password : null%>"
+                   <%} %>   							   
+                   
+                   >
+                   <i class="fa fa-eye" id="togglePassword" style="margin-left: -20px; cursor: pointer; color:blue"></i>
+                  </div>
+               </div>
+              
+             
+             
+               
+             
+            <br>             
+           <div class="centrado fondo"><button type="submit" class="superButton" alt="ingreso">Ingresar</button></div> 
+           <br>
+           <div class="centrado"><a href="/users/register" >Si no estás registrado hacelo Aquí!!</a></div>
+           <br>
+           <div  class="centrado"><input type="checkbox" name="remember_user">Recordarme</div>
+         </form>
+             
+         </div>
+        </main>
+        
+        <%- include('../partials/footer') %>
+        <script src="/js/loginValidation.js"></script>  
+</body>
+</html>

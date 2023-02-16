@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head', {title: 'Inicio' }) %>
+
+    <body style="background-color: #ebebeb">
+       
+        <%- include('partials/header') %>
+
+
+            <section class="banner">
+                <img src="images/img-home-banner.jpg" alt="Banner de ofertas">
+            </section>
+
+            <main>
+                
+
+                    <h2 class="titulares">Basado en tu última visita</h2>
+                    <div class="productos">
+
+                        <% for(let item of products) {%>
+                            <% if(item.on_off=="on" ){ %>
+                                <% if(item.category=="visited" ) {%>
+                                    <article>
+                                        <a class='hipervinc' href="/products/detail/<%= item.id %> ">
+                                            <img src='images/<%= item.image %>' alt='imagen de la cafetera'
+                                                width="100%">
+                                            <div class="contenedorarticulo">
+                                                <div class="icono"><i class="fas fa-truck"></i></div>
+                                                <p class="precio">
+                                                    <%= item.price %>
+                                                </p>
+                                                <p class="descuento">
+                                                    <%= item.discount %> % OFF
+                                                </p>
+                                                <p class="descripcion">
+                                                    <%= item.name %>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </article>
+
+                                    <% } %>
+                                        <% } %>
+
+                                            <% } %>
+                    </div>
+                </seccion>
+
+                <seccion>
+                    <h2 class="titulares">Sección de Ofertas</h2>
+                    <div class="productos">
+
+                        <% for(let item of products) {%>
+                            <% if(item.on_off=="on" ){ %>
+                                <article>
+                                    <a class='hipervinc' href="/products/detail/<%= item.id %> ">
+                                        <img src='images/<%= item.image %>' alt='imagen de la cafetera' width="100%">
+                                        <div class="contenedorarticulo">
+                                            <div class="icono"><i class="fas fa-truck"></i></div>
+                                            <p class="precio">
+                                                <%= item.price %>
+                                            </p>
+                                            <p class="descuento">
+                                                <%= item.discount %> % OFF
+                                            </p>
+                                            <p class="descripcion">
+                                                <%= item.name %>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </article>
+
+                                <% } %>
+                                    <% } %>
+                    </div>
+                </seccion>
+
+            </main>
+           
+
+            <%- include('partials/footer') %>
+        </body>
+        
+        <script src="/js/js-front"></script>
+</html>

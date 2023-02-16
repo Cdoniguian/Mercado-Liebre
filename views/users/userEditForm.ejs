@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head', {title: 'Inicio' }) %>
+
+    <body style="background-color: #ebebeb">
+
+        <%- include('../partials/header') %>
+
+          
+
+            <main>
+                <div class="titulo"><h2 class="products-title">Formulario de edicion de Usuario:</h2> 
+                    <img class="imageUserEdit" src="/images/<%= users.image %>">
+                </div>
+              
+               
+                <form action="/users/update/<%= users.id %>?_method=PUT" method="POST"
+                    enctype="multipart/form-data">
+                    <div class="editForm">
+                        <div class="editFormItems">
+                            <label for="id">ID:</label>
+                            <input type="number" id="id" name="id" value=<%=users.id %>
+                            >
+                        </div>
+                        <div class="editFormItems">
+                            <label for="name">Nombre:</label>
+                            <input type="text" id="firstName" name="firstName" value=<%=users.firstName %>>
+                        </div>
+                        <div class="editFormItems">
+                            <label for="name">Apellido:</label>
+                            <input type="text" id="lastName" name="lastName" value=<%=users.lastName %>>
+                        </div>
+                        <div class="editFormItems">
+                            <label for="name">Email:</label>
+                            <input type="text" id="email" name="email" value=<%=users.email %>>
+                        </div>
+                        <div class="editFormItems">
+                            <label for="name">Fecha de Nacimiento:</label>
+                            <input type="date" id="birthdate" name="birthdate" value=<%=users.birthdate %>>
+                        </div>
+                        <div class="editFormItems">
+                            <label for="name">Dirección:</label>
+                            <input type="text" id="address" name="address" value=<%=users.address %>>
+                        </div>
+                        <div class="editFormItems">
+                            <label for="name">Avatar:</label>
+                            <input type="text" id="avatar" name="avatar" value=<%=users.address %>>
+                        </div>
+                        <div class="editFormItems">
+                            <label for="name">Avatar:</label>
+                            <input type="text" name="image" accept=".jpg"  id="image" value=<%=users.image %>>
+                            <input type="file">
+                        </div>
+                        
+                    </div>
+                    <div>
+                        <br>
+                        <div class="col-12">
+                            <button type="reset" class="buy-now-button">Cancelar</button>
+                        </div>
+                        <br>
+                        <br>
+                        <div >
+                            <button class="superButton" >Guardar / Modificar</button>
+                        </div>
+                        <br>
+                    </div>
+                </form>
+            </main>
+            <%- include('../partials/footer') %>
+    </body>
+
+</html>

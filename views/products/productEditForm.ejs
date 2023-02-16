@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head', {title: 'Inicio' }) %>
+
+    <body style="background-color: #ebebeb">
+
+        <%- include('../partials/header') %>
+
+            <section class="banner">
+                <img src="/images/img-home-banner.jpg" alt="Banner de ofertas">
+            </section>
+
+            <main>
+                <h2 class="products-title">Formulario de edicion de producto: <%= items.name %>
+                </h2>
+                <div class="contenedorflex">
+                    <form action="/products/update/<%= items.id %>?_method=PUT" method="POST"
+                        enctype="multipart/form-data">
+
+                        <div class="col-12 col-md-6">
+                            <label for="id" class="form-label">ID:</label>
+                            <input type="number" id="id" name="id" value=<%=items.id %>
+                            class="form-input">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="name" class="form-label">Nombre del producto:</label>
+                            <input type="text" id="name" name="name" value=<%=items.name %>
+                            class="form-input">
+                        </div>
+                        <br>
+                        <div class="col-12 col-md-6">
+                            <label for="price" class="form-label">Precio del producto:</label>
+                            <input type="number" id="price" name="price" value=<%=items.price %> class="form-input">
+                        </div>
+                        <br>
+
+                        <div class="col-12">
+                            <label for="description" class="form-label">Descipción:</label>
+                            <textarea name="description" id="description" rows="10" style="width:100%"
+                                class="form-input"> <%= items.description %></textarea>
+                        </div>
+                        <br>
+                        <div>
+                            <label for="discount" class="form-label">Descuento:</label>
+                            <input type="number" id="discount" name="discount" value=<%=items.discount %>
+                            class="form-input">
+                        </div>
+                        <br>
+                        <br>
+                        <div>
+                            <div><label>Producto Destacado </label></div>
+                            <label for="featured">SI </label>
+                            <input type="radio" value = "si" name="featured"
+                                <%= (items.featured === "si" ) ? 'checked' : null%>>
+                            
+                            <label for="featured">NO </label>
+                            <input type="radio" value = "no" name="featured"
+                                <%=(items.featured === "no" ) ? 'checked' : null%>>
+                        </div>
+
+                        <br>
+
+                        <div>
+                            <label for="image">Seleccionar una imagen de producto: <%=items.image%></label>
+                            <input type="file" name="image" accept=".jpg" multiple style="width: 90%;">
+                        </div>
+                        <br>
+                        <div>
+                            <div><label>Producto Disponible/Descontinuado </label></div>
+                            <label for="on_off">Disponible </label>
+                            <input type="radio" value= "on" name="on_off"
+                                <%= (items.on_off === "on" ) ? 'checked' : null%>>
+
+                            <label for="in-Sale">Descontinuado </label>
+                            <input type="radio" value= "off" name="on_off"
+                                <%= (items.on_off === "off" ) ? 'checked' : null%>>
+                        </div>
+
+                        <br>
+                        <div>
+                            <br>
+                            <div class="col-12">
+                                <button type="reset" class="buy-now-button">Cancelar</button>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="col-12">
+                                <button type="submit" class="buy-now-button">Guardar producto / Modificar</button>
+                            </div>
+                            <br>
+                        </div>
+                    </form>
+                </div>
+
+            </main>
+            <%- include('../partials/footer') %>
+    </body>
+
+</html>

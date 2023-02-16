@@ -1,0 +1,19 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head', {title: 'Inicio'}) %>
+
+    <body>
+        <%- include('../partials/header') %>
+        <main>
+            <div><hi>hola</hi></div> 
+            <% if(locals.usuarioLogueado){ %>
+                holaaaaaa <%= locals.usuarioLogueado.firstName%>
+                <div><img src='/images/<%= locals.usuarioLogueado.image %> ' style="width: 10%" ></div>
+                <div><%=locals.usuarioLogueado.email %></div>
+           <% } %> 
+        </main>
+        
+     </body>
+</html>

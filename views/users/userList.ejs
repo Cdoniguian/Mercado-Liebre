@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head', {title: 'Inicio'}) %>
+
+    <body style="background-color: #ebebeb" >
+       
+        <%- include('../partials/header') %>
+
+
+<main >
+	<h1>listado de usuarios </h1>
+<table>
+
+    <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Email</th>
+        <th>Avatar</th>
+        <th></th>
+    </tr>
+    <% for(let item of users) {%>
+        <tr>
+            
+                <td><%= item.firstName %></td>
+                <td><%= item.lastName %></td>
+                <td><%= item.email %></td>
+                <td><img class="imageUserList" src="/images/<%= item.image %>"></th>
+                <td><a class='hipervinc' href="/users/userEditForm/<%= item.id %>"> Editar</a></td>  
+        </tr>
+       
+        <% } %> 
+    
+ 
+</table>
+   
+
+        </main>
+        <%- include('../partials/footer') %>
+		<script src="/js/registerValidation.js"></script>  
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head', {title: 'Inicio'}) %>
+
+    <body style="background-color: #ebebeb" >
+       
+        <%- include('../partials/header') %>
+
+
+<main class="form">
+	<h2>FORMULARIO DE REGISTRO</h2>
+
+   <form action="/users/register" method="POST"  enctype="multipart/form-data" style="line-height: 30px; font-size: 18px;">
+	  <br>
+		<div class="contenedorflex2">
+			<div class="centrado"><label for="firstName">Nombre: </label>
+	   							<div  class="noFlex" >
+									<input style="width: 90%; border: white;"
+									type="text"
+									 name="firstName"
+									 id="firstName"
+									 size="30"
+									 minlength="3"
+									 maxlength="20"
+									 <% if(locals.errors && errors.firstName){ %>  	
+										class="redpH" placeholder="<%= errors.firstName.msg %>"
+									 <% }else{ %>
+										 placeholder="juan"
+										 value="<%= locals.oldData ? oldData.firstName : null%>"
+									 <%} %>   							   
+									 >
+								</div>
+								
+			</div>
+			<div class="centrado"><label for="lastName">Apellido: </label>
+				<div  class="noFlex" >
+				 <input style="width: 90%; border: white;"
+				 type="text"
+				  name="lastName"
+				  id="lastName"
+				  size="30"
+				  minlength="3"
+				  maxlength="20"
+				  <% if(locals.errors && errors.lastName){ %>  	
+					 class="redpH" placeholder="<%= errors.lastName.msg %>"
+				  <% }else{ %>
+					  placeholder="Perez"
+					  value="<%= locals.oldData ? oldData.lastName : null%>"
+				  <%} %>   							   
+				  >
+			 	</div>
+			 
+			</div>
+			
+		
+		</div>	
+	   <br>
+		<div class="contenedorflex2">
+			<div class="centrado"><label for="address">Ingresar el Domicilio: </label>
+				<div  class="noFlex" >
+				 <input style="width: 90%; border: white;"
+				 type="text"
+				  name="address"
+				  id="address"
+				  size="30"
+				  minlength="3"
+				  maxlength="20"
+				  <% if(locals.errors && errors.address){ %>  	
+					 class="redpH" placeholder="<%= errors.address.msg %>"
+				  <% }else{ %>
+					  placeholder="Siempre viva 53"
+					  value="<%= locals.oldData ? oldData.address : null%>"
+				  <%} %>   							   
+				  >
+			 	</div>
+			</div>
+			
+			<div class="centrado"><label for="firstName">Fecha de Nacimiento: </label>
+				<div  class="noFlex" >
+				 <input style="width: 90%; border: white;"
+				 type="date"
+				  name="birthdate"
+				  id="birthdate"
+				  <% if(locals.errors && errors.birthdate){ %>  	
+					class="red" 
+				  <% }else{ %>
+					  placeholder="Siempre viva 53"
+					  value="<%= locals.oldData ? oldData.birthdate : null%>"
+				  <%} %>   							   
+				  >
+			 	</div>
+			</div>
+		</div>
+	  <br>
+	  <div class="contenedorflex2">
+			
+
+			<div class="centrado"><label for="email">Ingresar el Email: </label>
+				<div  class="noFlex" >
+				 <input style="width: 90%; border: white;"
+				 type="email"
+				  name="email"
+				  id="email"
+				  size="30"
+				 
+				  <% if(locals.errors && errors.email){ %>  	
+					 class="redpH" placeholder="<%= errors.email.msg %>"
+				  <% }else{ %>
+					  placeholder="Juan33@gmail.com"
+					  value="<%= locals.oldData ? oldData.email : null%>"
+				  <%} %>   							   
+				  >
+			 	</div>
+			</div>
+
+
+			<div class="centrado">
+				<label for="avatar">Seleccionar una imagen o Avatar:</label>
+				<input  class="noFlex1" type="file" name="avatar" accept=".jpg" multiple style="width: 100%;">
+			</div>
+		</div>
+		<br>
+		<div  class="contenedorflex2">
+
+			<div class="centrado"><label for="password">Contraseña: </label>
+				<div  class="noFlex" >
+				 <input style="width: 90%; border: white;"
+				 type="password"
+				  name="password"
+				  id="password"
+				  size="30"
+				  minlength="3"
+				  maxlength="20"
+				  <% if(locals.errors && errors.password){ %>  	
+					 class="redpH" placeholder="<%= errors.password.msg %>"
+				  <% }else{ %>
+					  value="<%= locals.oldData ? oldData.password : null%>"
+				  <%} %>   							   
+				  >
+			 	</div>
+			</div>
+			
+			<div class="centrado"><label for="address">Confirmar Contraseña: </label>
+				<div  class="noFlex" >
+				 <input style="width: 90%; border: white;"
+				 type="password"
+				  name="confirmPass"
+				  id="confirmPass"
+				  size="30"
+				  minlength="8"
+				  maxlength="20"
+				  <% if(locals.errors && errors.confirmPass){ %>  	
+					 class="redpH" placeholder="<%= errors.confirmPass.msg %>"
+				  <% }else{ %>
+					  value="<%= locals.oldData ? oldData.confirmPass : null%>"
+				  <%} %>   							   
+				  >
+			 	</div>
+			</div> 	 
+
+		</div>
+		<br>
+		<div>
+			<ul>
+				<li class="listPass" id="pass1">La contraseña debe tener al menos 8 caracteres</li>
+				<li class="listPass" id="pass2">La contraseña debe tener caracteres especiales</li>
+				<li class="listPass" id="pass3">La contraseña debe tener Mayusculas</li>
+			</ul>
+		</div>
+	  
+	   <br>    
+   
+	 <div class="centrado fondo"><button type="submit" class="superButton">Registrar Datos</button></div> 
+	 
+	 <br>
+	 <div class="centrado fondo" ><button type="reset" class="button">Reset</button></div>
+	 <br>
+
+   </form>
+
+        </main>
+        <%- include('../partials/footer') %>
+		<script src="/js/registerValidation.js"></script>  
+</body>
+</html>

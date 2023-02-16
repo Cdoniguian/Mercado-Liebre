@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head', {title: 'Inicio' }) %>
+
+    <body style="background-color: #ebebeb">
+
+        <%- include('../partials/header') %>
+
+
+
+            <main>
+                <div>
+                    <div class="detalleProducto">
+                        <h2>Detalle del producto: <%= items.name %>
+                        </h2>
+                    </div>
+                    
+                    <div class="center">
+                        <div class="ventanaDetalle">
+                            <div class="detalleImage">
+                                <div class="camBackResponsive">
+                                    <a class="camBack" href="/products/productsList"><i
+                                            class="bi bi-arrow-left-square-fill"></i> Regresar</a>
+                                </div>
+                                
+                                <div>
+                                    <img src="/images/<%= items.image %>" style="width:80%;" alt="product image"
+                                        class="product-detail-img">
+                                    <p>
+                                        <%= items.description %>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="priceDetail">
+                                <div class="paddingTopBottom">
+                                    <h2 class="separarH">
+                                        <%= items.name %>
+                                    </h2>
+                                    <h2 class="separarH">
+                                        id:<%= items.id %>
+                                            posicion:<%= items.id %>
+                                    </h2>
+                                </div>
+                                <div class="priceFlex">
+                                    <div class="price">
+                                        <p>
+                                            $<%= items.price %>
+                                        </p>
+                                    </div>
+                                    <div class="discount">
+                                        <p>
+                                            <%= items.discount %> % OFF
+                                        </p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="finalPrice">
+                                        <% finalPrice=items.price - ((items.price * items.discount)/100)%>
+                                            $ <%=finalPrice %>
+                                    </p>
+                                </div>
+                                <br>
+                                <div class="target">
+                                    <i class="fas fa-credit-card"></i>
+                                    <p class="separarH">Pagá en 12 cuotas sin interes</p>
+                                </div>
+                                <br>
+                                <div class="target">
+                                    <i class="fas fa-store"></i>
+                                    <p class="separarH">Retiro gratis en locales del vendedor</p>
+                                </div>
+                                <br>
+                                <br>
+                                <%if (typeof user !='undefined' && user.email=="admin@admin.com" ) { %>
+
+                                    <form action="/products/edit/<%= items.id %>" method="GET"
+                                        enctype="multipart/form-data">
+                                        <div>
+                                            <button type="submit"
+                                                style="margin-right:10px; font-size: 2rem;">Editar</button>
+                                        </div>
+                                    </form>
+                                    <br>
+
+                                    <br>
+                                    <% }else{ %>
+                                        <form <%if (locals.isLogged) { %>
+                                            action="/"
+                                            <%} else{ %>
+                                                action="/users/login"
+                                                <%} %>
+                                                    method="get">
+                                                    <div class="buttonDetail2"><button class="buttoncarrito"
+                                                            id="buttoncarrito" type="submit">Añadir al carrito</button>
+                                                    </div>
+                                        </form>
+                                        <% } %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <%- include('../partials/footer') %>
+                <script src="/js/detailLogin.js"></script>
+    </body>
+
+</html>

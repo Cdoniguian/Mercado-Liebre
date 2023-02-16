@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head', {title: 'Listas de productos' }) %>
+
+    <body style="background-color: #ebebeb">
+
+        <%- include('../partials/header') %>
+
+            <section class="banner">
+                <img src="/images/img-home-banner.jpg" alt="Banner de ofertas">
+            </section>
+
+            <main>
+
+                <seccion>
+                    <h2 class="titulares">Listado de todos los productos </h2>
+                    <div class="productos">
+
+                        <% for(let item of products) {%>
+                            <% if(item.on_off=="on" ){ %>
+                                <article>
+                                    <a class='hipervinc' href="/products/detail/<%= item.id %> ">
+                                        <img src='/images/<%= item.image %>' width="100%">
+                                        <div class="contenedorarticulo">
+                                            <div class="icono"><i class="fas fa-truck"></i></div>
+                                            <p class="precio">
+                                                <%= item.price %>
+                                            </p>
+                                            <p class="descuento">
+                                                <%= item.discount %> % OFF
+                                            </p>
+                                            <p class="descripcion">
+                                                <%= item.name %>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </article>
+                                <% } %>
+                                    <% } %>
+                    </div>
+                </seccion>
+
+
+
+            </main>
+
+            <%- include('../partials/footer') %>
+            
+    </body>
+
+</html>

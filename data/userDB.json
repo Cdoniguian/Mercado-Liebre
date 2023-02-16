@@ -1,0 +1,128 @@
+[
+ {
+  "id": 0,
+  "firstName": "Chritian",
+  "lastName": "Doniguian",
+  "birthdate": "2022-11-02",
+  "email": "christian@yahoo.com",
+  "address": "patria 6",
+  "image": "barney.jpg",
+  "password": "$2a$10$czV8W4PNQRjvRwV/dXllw.8NZbQY7x5.sJ.ZhT6Kojn5DzZehTaI."
+ },
+ {
+  "id": 1,
+  "firstName": "Chris",
+  "lastName": "admin",
+  "birthdate": "2022-11-22",
+  "email": "cdoniguian@itr.edu.ar",
+  "address": "patria 615",
+  "image": "bart.jpg",
+  "password": "$2a$10$/DrIXfEhHuTBIR/NN1tWbODpXStdCQWydH8Rb3ZISfo8tbtKvZJEq"
+ },
+ {
+  "id": 2,
+  "firstName": "Christian2",
+  "lastName": "Doniguiann",
+  "birthdate": "2022-11-08",
+  "email": "cris28@hotmail.com",
+  "address": "avenida 567",
+  "image": "userDefault.jpg",
+  "password": "$2a$10$MB0MESm5P5OsnXVjzPD2Oujj8ewlaKcf9aCMNIQwLPnMhUW5Q3aOe"
+ },
+ 
+ {
+  "id": 3,
+  "firstName": "Christian5",
+  "lastName": "Doniguian",
+  "birthdate": "2022-11-10",
+  "email": "doniguian2@yahoo.com",
+  "address": "patria 615",
+  "image": "bart.jpg",
+  "password": "$2a$10$Q83/il8eWYdRMtZWo.xxFekBl/0x6rN1cJlXBfznVw5vu7ZFBLK42"
+ },
+ 
+ {
+  "id": 4,
+  "firstName": "juan",
+  "lastName": "perez",
+  "birthdate": "2022-11-15",
+  "email": "juan33@gmail.com",
+  "address": "lote 1 manzana 19",
+  "image": "userDefault.jpg",
+  "password": "$2a$10$tPxtuGPRwoBvTEA.ajJvJ.Fe4rJ3/qbO9yQbTIyh9V4Ffz5mInmAS"
+ },
+ 
+ {
+  "id": 5,
+  "firstName": "Barney",
+  "lastName": "Gomez",
+  "birthdate": "2022-11-15",
+  "email": "barneygomez1@gmail.com",
+  "address": "patria 615",
+  "image": "bart.jpg",
+  "password": "$2a$10$RIHi8.NypJIDyOXFvKhyQ.9TfL19GZU86OrP9iZHoGEj44p5grB5S"
+ },
+ {
+  "id": 6,
+  "firstName": "dolr",
+  "lastName": "Doniguia",
+  "birthdate": "2022-11-23",
+  "email": "aaaaaaaaaaaa@sss.com",
+  "address": "patria 6",
+  "image": "avatar.jpg",
+  "password": "$2a$10$2wI0jxI6hFZp78zXqMquD.67G2BrQLuEbN/Ox3CxSqbtAIBVSiHDK"
+ },
+ {
+  "id": 7,
+  "firstName": "Barney",
+  "lastName": " ssss",
+  "birthdate": "2022-11-07",
+  "email": "carilo2@hotmail.com",
+  "address": "patria 615",
+  "image": "barney.jpg",
+  "password": "$2a$10$EaZ94PAaNg/fiQHRyv8e4eujSEZoILTUuU9o4vXaLXwEgi4D7s3FK"
+ },
+ 
+ {
+  "id": 8,
+  "firstName": "Christian",
+  "lastName": "Doniguian",
+  "birthdate": "2022-11-07",
+  "email": "cdoniguian2@itr.edu.ar",
+  "address": "patria 615",
+  "image": "userDefault.jpg",
+  "password": "$2a$10$BjvAK2FXDoU5sW0URmHw/ubtsZJDTaPPKRggbIRs74EpMv4NpN91q"
+ },
+ 
+ {
+  "id": 9,
+  "firstName": "pepe",
+  "lastName": " grillo",
+  "birthdate": "2022-11-07",
+  "email": "pepegrillo@hotmail.com",
+  "address": "patria 615",
+  "image": "bart.jpg",
+  "password": "$2a$10$EaZ94PAaNg/fiQHRyv8e4eujSEZoILTUuU9o4vXaLXwEgi4D7s3FK"
+ },
+
+ {
+  "id": 10,
+  "firstName": "Christian",
+  "lastName": "Doniguian",
+  "birthdate": "2022-11-23",
+  "email": "christian_doniguian@yahoo.com",
+  "address": "qaaaswq",
+  "image": "avatar.jpg",
+  "password": "$2a$10$QfjMyXIBdi8a5Hcc5t02G.x7H72lgNz6aUnjt30hzf6tNd6CuJRD2"
+ },
+ {
+  "id": 11,
+  "firstName": "Administrador",
+  "lastName": "Admin",
+  "birthdate": "2022-11-15",
+  "email": "admin@admin.com",
+  "address": "patria 6",
+  "image": "userDefault.jpg",
+  "password": "$2a$10$mYeDVlbXvBvGy9HT8pz0ueKD3Dawobzhj7cXwC72dkCvN3tVoSyUW"
+ }
+]

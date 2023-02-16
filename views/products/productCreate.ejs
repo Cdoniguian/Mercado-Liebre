@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head', {title: 'Inicio' }) %>
+
+    <body style="background-color: #ebebeb">
+
+        <%- include('../partials/header') %>
+
+            <section class="banner">
+                <img src="/images/img-home-banner.jpg" alt="Banner de ofertas">
+            </section>
+
+            <main>
+                <h2 class="products-title">Formulario de creación de productos</h2>
+                <div class="contenedorflex">
+                    <form action="/products/create" method="POST" enctype="multipart/form-data">
+
+                        <div class="col-12 col-md-6">
+                            <label for="name" class="form-label">Nombre del producto:</label>
+                            <input type="text" id="name" name="name" placeholder="Ej: Zapatillas Reebok"
+                                class="form-input">
+                        </div>
+                        <br>
+                        <div class="col-12 col-md-6">
+                            <label for="price" class="form-label">Precio del producto:</label>
+                            <input type="number" id="price" name="price" placeholder="Ej: 5678" class="form-input">
+                        </div>
+                        <br>
+
+                        <div class="col-12">
+                            <label for="description" class="form-label">Descripción:</label>
+                            <textarea name="description" id="description" placeholder="comentario"
+                                class="form-input"></textarea>
+                        </div>
+                        <br>
+                        <div>
+                            <label for="discount" class="form-label">Descuento:</label>
+                            <input type="number" id="discount" name="discount" placeholder="Ej: 15" class="form-input">
+                        </div>
+                        <br>
+                        <br>
+                        <div>
+                            <div><label>Producto Destacado </label></div>
+                            <label for="in-Sale">SI </label><input type="radio" value="si" name="featured">
+                        </div>
+
+                        <br>
+
+                        <div>
+                            <label for="image">Seleccionar una imagen de producto:</label>
+                            <input type="file" name="image" accept=".jpg" multiple style="width: 90%;" required>
+                        </div>
+                        <br>
+                        <div>
+                            <div><label>Producto Disponible/Discontinuado </label></div>
+                            <label for="in-Sale">Disponible </label><input type="radio" value="on" name="on_off">
+
+                            <label for="in-Sale">Descontinuado </label><input type="radio" value="off" name="on_off">
+                        </div>
+
+                        <br>
+                        <div>
+                            <br>
+                            <div class="col-12">
+                                <button type="reset" class="buy-now-button">Canselar</button>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="col-12">
+                                <button type="submit" class="buy-now-button">Guardar producto</button>
+                            </div>
+                            <br>
+                    </form>
+                </div>
+
+            </main>
+            <%- include('../partials/footer') %>
+    </body>
+
+</html>
